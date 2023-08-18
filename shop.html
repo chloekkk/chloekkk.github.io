@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet Treasures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0E5CF;
+            /* Vanilla Yellow */
+        }
+
+        .header {
+            background-color: #E63946;
+            /* Watermelon Red */
+            color: #1D3557;
+            /* Dark Blue */
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .tabs {
+            background-color: #1D3557;
+            /* Dark Blue */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .tab {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: 0.3s;
+            background-color: inherit;
+            color: #F0E5CF;
+            /* Vanilla Yellow */
+            font-size: 16px;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .tab:hover {
+            background-color: #457B9D;
+            /* Light Blue */
+        }
+
+        .tab.active {
+            background-color: #F0E5CF;
+            /* Vanilla Yellow */
+            color: #1D3557;
+            /* Dark Blue */
+        }
+
+        .content {
+            padding: 20px;
+            color: #1D3557;
+            /* Dark Blue */
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product {
+            background-color: #F4A261;
+            /* Peachy Orange */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            width: 350px;
+            height: 350px;
+            object-fit: contain;
+        }
+
+        .product-title {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .product-price {
+            margin-top: 5px;
+        }
+
+        .buy-button {
+            margin-top: 10px;
+            background-color: #457B9D;
+            /* Light Blue */
+            color: #F0E5CF;
+            /* Vanilla Yellow */
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #F0E5CF;
+            /* Vanilla Yellow */
+            color: #1D3557;
+            /* Dark Blue */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <h1>Crochet Treasures</h1>
+        <div class="cart-icon">
+            <img src="https://example.com/cart-icon.png" alt="Cart">
+            <span class="cart-count">3</span>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="openTab('home')">Home</button>
+        <button class="tab" onclick="openTab('yarn')">Yarn</button>
+        <button class="tab" onclick="openTab('patterns')">Patterns</button>
+        <button class="tab" onclick="openTab('products')">Products</button>
+        <button class="tab" onclick="openTab('miscellaneous')">Miscellaneous</button>
+    </div>
+
+    <div class="content">
+        <div id="home" class="tab-content">
+            <h2>Welcome to Crochet Treasures!</h2>
+            <p>Your one-stop shop for all things crochet.</p>
+
+            <h2>Popular Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/91nblm2a59L._AC_SX679_.jpg" alt="Assorted Yarn">
+                    <p class="product-title">Assorted Yarn</p>
+                    <p class="price">$12.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="product">
+                    <img src="https://down-sg.img.susercontent.com/file/a63916c18656ad350b20c3f70f5827ff"
+                        alt="Assorted Crochet Hooks">
+                    <p class="product-title">Assorted Crochet Hooks</p>
+                    <p class="price">$9.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="product">
+                    <img src="https://amigurumi.today/wp-content/uploads/2022/11/Free-Sophie-doll-crochet-pattern-by-Amigurumi-Today.jpg"
+                        alt="Crochet Doll Pattern">
+                    <p class="product-title">Crochet Doll Pattern</p>
+                    <p class="price">$8.49</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="product">
+                    <img src="https://64.media.tumblr.com/4d5ee3c7e2ef8dcc5e49cd7457900015/tumblr_nkp4o8VQS81reogbdo2_r1_1280.jpg"
+                        alt="Crochet Octopus">
+                    <p class="product-title">Crochet Octopus</p>
+                    <p class="price">$15.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="product">
+                    <img src="https://media.karousell.com/media/photos/products/2023/1/14/crochet_bee_keychain_1673665160_81f855ac_progressive.jpg"
+                        alt="Crochet Bee Keychain">
+                    <p class="product-title">Crochet Bee Keychain</p>
+                    <p class="price">$5.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="yarn" class="tab-content" style="display:none;">
+            <h2>Explore Yarn</h2>
+            <p>Discover a wide range of yarn for your crochet projects.</p>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/91nblm2a59L._AC_SX679_.jpg" alt="Assorted Yarn">
+                    <p class="product-title">Assorted Yarn</p>
+                    <p class="price">$12.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="patterns" class="tab-content" style="display:none;">
+            <h2>Patterns Collection</h2>
+            <p>Check out our curated patterns to inspire your next project.</p>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://amigurumi.today/wp-content/uploads/2022/11/Free-Sophie-doll-crochet-pattern-by-Amigurumi-Today.jpg"
+                        alt="Crochet Doll Pattern">
+                    <p class="product-title">Crochet Doll Pattern</p>
+                    <p class="price">$8.49</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="products" class="tab-content" style="display:none;">
+            <h2>Products</h2>
+            <p>Crafted Creations: Showcasing Handmade Crochet Treasures.</p>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://64.media.tumblr.com/4d5ee3c7e2ef8dcc5e49cd7457900015/tumblr_nkp4o8VQS81reogbdo2_r1_1280.jpg"
+                        alt="Crochet Octopus">
+                    <p class="product-title">Crochet Octopus</p>
+                    <p class="price">$15.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="product">
+                    <img src="https://media.karousell.com/media/photos/products/2023/1/14/crochet_bee_keychain_1673665160_81f855ac_progressive.jpg"
+                        alt="Crochet Bee Keychain">
+                    <p class="product-title">Crochet Bee Keychain</p>
+                    <p class="price">$5.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="product">
+                    <img src="https://i.etsystatic.com/12045584/r/il/3d6899/3411533165/il_fullxfull.3411533165_j0vg.jpg"
+                        alt="Stylish Crochet Bag">
+                    <p class="product-title">Stylish Crochet Bag</p>
+                    <p class="price">$25.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <!-- Add more products here -->
+            </div>
+        </div>
+        <div id="miscellaneous" class="tab-content" style="display:none;">
+            <h2>Miscellaneous Items</h2>
+            <p>Explore a variety of crochet accessories and tools.</p>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://down-sg.img.susercontent.com/file/a63916c18656ad350b20c3f70f5827ff"
+                        alt="Assorted Crochet Hooks">
+                    <p class="product-title">Assorted Crochet Hooks</p>
+                    <p class="price">$9.99</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            const tabs = document.getElementsByClassName('tab-content');
+            for (const tab of tabs) {
+                tab.style.display = 'none';
+            }
+            document.getElementById(tabName).style.display = 'block';
+
+            const activeTabs = document.getElementsByClassName('tab');
+            for (const tab of activeTabs) {
+                tab.classList.remove('active');
+            }
+            document.querySelector(`.tab:contains(${tabName})`).classList.add('active');
+        }
+        openTab('home');
+    </script>
+</body>
+
+</html>
